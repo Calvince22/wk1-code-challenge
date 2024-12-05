@@ -1,47 +1,42 @@
-//student grade generator
-/*
-Write a function that prompts the user to input student marks. 
-The input should be between 0 and 100. The output should correspond 
-the correct grade, as shown below: 
+const readline = require('readline'); // Import the readline module
 
-        A > 79, B - 60 to 79, C -  59 to 49, D - 40 to 49, E - less 40.
-*/
-//const readline = require("readline");
-//
-//const r1 = readline.createInterface({
-//    input: process.stdin,
-//    output: process.stdout
-//});
+// Create an interface for input/output
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
 
-function gradeGenerator() {
-    //r1.question("Input student marks (0-100): ", (input) => {
-        let input = prompt("Input your marks: ")
-        let mark = Number(input);
+// Function to get student grade
+function getStudentGrade() {
+    rl.question("Please enter student marks (0-100): ", (input) => {
+        let marks = Number(input);
 
         // Validate the input
-        if (isNaN(mark) || mark < 0 || mark > 100) {
+        if (isNaN(marks) || marks < 0 || marks > 100) {
             console.log("Invalid input. Please enter a number between 0 and 100.");
-            return gradeGenerator(); // Retry input
+            rl.close(); // Close the readline interface
+            return; 
         }
 
-        // Determine the grade
+        // Determine the grade based on the marks
         let grade;
-        if (mark > 79) {
-            return "A";
-        } else if (mark >= 60) {
-            return "B";
-        } else if (mark >= 50) {
-            return"C";
-        } else if (mark >= 40) {
-            return"D";
+        if (marks > 79) {
+            grade = 'A';
+        } else if (marks >= 60) {
+            grade = 'B';
+        } else if (marks >= 50) {
+            grade = 'C';
+        } else if (marks >= 40) {
+            grade = 'D';
         } else {
-            return "E";
+            grade = 'E';
         }
 
-        //console.log(`The student's grade is: ${grade}`);
-        //r1.close(); 
-    //});
+        // Output the corresponding grade
+        console.log(`The grade for marks ${marks} is: ${grade}`);
+        rl.close(); // Close the readline interface after use
+    });
 }
 
-
-console.log(gradeGenerator());
+// Callling  the function to execute
+getStudentGrade();

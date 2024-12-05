@@ -12,7 +12,7 @@ The project contains three different projects with each project different from t
 
 Write a function that prompts the user to input student marks. The input should be between 0 and 100. The output should correspond the correct grade, as shown below: 
 
-        A > 79, B - 60 to 79, C -  59 to 49, D - 40 to 49, E - less 40.
+```bash  A > 79, B - 60 to 79, C -  59 to 49, D - 40 to 49, E - less 40.`
 
  
 
@@ -38,25 +38,14 @@ Links to an external site.-  Links to an external site.Links to an external site
 
 
 
-
----
-
-## Features
-
-How to Test:
- -Run the script in a JavaScript environment, browser console. 
- By using explorer.exe index.html .
-
----
-
 ## Installation
 
-Guide users on how to set up the project. Use code blocks for clarity.
+Guide users on how to set up the project. Use visual studio for clarity.
 
 ### Prerequisites
-List tools or dependencies required (e.g., Node.js, Python).
+List tools or dependencies required (e.g., Node.js).
 
 ### Steps
 1. Clone the repository:
    ```bash
-   git clone https://github.com/calvince22/project-name.git
+   git clone https://github.com/calvince22/wk1-code-challenge.git
